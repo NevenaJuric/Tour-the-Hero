@@ -1,0 +1,5 @@
+<div *ngIf="messageSpecService.messagesSpec.length">
+  <h2>Message Speciality</h2>
+  <button class="clear" (click)='messageSpecService.clearspec()'>Clear speciality</button>
+  <div *ngFor='let message of messageSpecService.messagesSpec'>{{message}}</div>
+</div>

@@ -1,0 +1,82 @@
+<!-- <div *ngIf="selectedHero"> -->
+
+<!-- <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div><span>id: {{selectedHero.id}}</span></div> -->
+<!-- <div><span>speciality: {{hero.speciality}}</span></div> -->
+
+<!-- <br>
+
+    <div>
+        <label>
+            name:
+            <input [(ngModel)]="selectedHero.name" placeholder="name" />
+        </label>
+    </div>
+
+    <br> -->
+
+<!-- </div> -->
+
+<!-- <div>
+    <label>
+        speciality:
+        <input [(ngModel)]="hero.speciality" placeholder="speciality">
+    </label>
+</div> -->
+
+<!-- <div *ngIf="selectedHeroDetail">
+
+    <h2>{{selectedHeroDetail.name | uppercase}} Details</h2>
+    <div><span>speciality: {{selectedHeroDetail.speciality}}</span></div>
+    <br>
+    <div><span>strong: {{selectedHeroDetail.strong}}</span></div>
+
+</div> -->
+
+<!-- <h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+        <span class="badge">{{hero.id}}.</span>
+        {{hero.name}}
+    </li>
+</ul> -->
+
+<!-- Add hero -->
+
+<div>
+    <label>
+        Hero name:
+        <input #heroName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value); heroName.value=''">add</button>
+</div>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+    </li>
+</ul>
+
+<!-- <h2>Heroes Detail</h2>
+<ul class="heroes">
+    <li *ngFor="let herospec of heroSpec" (click)="onSelectDetail(herospec)">
+        <span class="badge">{{herospec.id}}.</span>
+        {{herospec.name}}
+    </li>
+</ul> -->
+
+<ul class="heroes">
+    <li *ngFor="let herospec of heroSpec">
+        <a routerLink="/speciality/{{herospec.id}}">
+            <span class="badge">{{herospec.id}}</span> {{herospec.name}}
+        </a>
+    </li>
+</ul>
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+<!-- <app-hero-speciality [herospec]="selectedHeroDetail"></app-hero-speciality> -->
